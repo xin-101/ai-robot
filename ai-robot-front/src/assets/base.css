@@ -1,0 +1,9 @@
+/* color palette from <https://github.com/vuejs/theme> */
+
+body {
+  line-height: 28px;
+  font-size: 16px;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+  "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", "Droid Sans Fallback", sans-serif;
+  color: darkgoldenrod;
+}

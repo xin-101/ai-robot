@@ -1,0 +1,27 @@
+[
+  {
+    "id": "java-001",
+    "title": "Java基础概念",
+    "content": "Java是一种广泛使用的面向对象的编程语言，以其跨平台、健壮性和安全性著称。JVM（Java虚拟机）是实现'一次编写，到处运行'的关键。"
+  },
+  {
+    "id": "java-002",
+    "title": "集合框架概述",
+    "content": "Java集合框架提供了丰富的接口和类来存储和操作数据集合，如List、Set、Map等。ArrayList和HashMap是最常用的实现类。"
+  },
+  {
+    "id": "java-003",
+    "title": "多线程编程",
+    "content": "Java内置了对多线程的支持，通过Thread类和Runnable接口可以创建线程。并发工具包java.util.concurrent提供了高级的并发控制机制。"
+  },
+  {
+    "id": "java-004",
+    "title": "异常处理机制",
+    "content": "Java通过try-catch-finally块和throw/throws关键字来处理异常。检查型异常必须被捕获或声明，而非检查型异常则不需要。"
+  },
+  {
+    "id": "java-005",
+    "title": "Java I/O流",
+    "content": "Java I/O提供了处理输入输出操作的类库，包括字节流（InputStream/OutputStream）和字符流（Reader/Writer），支持文件读写和网络通信。"
+  }
+]

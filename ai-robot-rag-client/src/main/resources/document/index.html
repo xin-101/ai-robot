@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="aaaa" />
+    <meta name="date" content="2025-09-01" />
+    <title>🤖 AI助手 - 智能对话平台</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #121212;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        header {
+            margin-bottom: 3rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 1rem;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin: 0;
+            font-size: 2.2rem;
+        }
+
+        .subtitle {
+            margin-top: 0.5rem;
+            color: #a0a0a0;
+            font-size: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
+
+        .subtitle span {
+            display: inline-block;
+            position: relative;
+        }
+
+        .subtitle span::after {
+            content: "·";
+            color: #666;
+            margin-left: 0.5rem;
+        }
+
+        .subtitle span:last-child::after {
+            content: "";
+        }
+
+        .main-content {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            color: #ffffff;
+            margin-top: 0;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        p {
+            margin: 1rem 0;
+            color: #cccccc;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .feature-card h3 {
+            color: #00bfff;
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .feature-card p {
+            color: #b0b0b0;
+            margin: 0.75rem 0;
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+            .subtitle {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .subtitle span::after {
+                content: "";
+                margin: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>🤖 AI助手</h1>
+        <p class="subtitle">
+            <span>智能对话</span>
+            <span>知识问答</span>
+            <span>任务协作</span>
+        </p>
+    </header>
+
+    <div class="main-content">
+        <h2>欢迎使用AI助手平台</h2>
+        <p>我们的AI助手集成了先进的自然语言处理技术，为您提供智能化的对话体验和专业的知识服务。支持多轮对话、上下文理解与复杂任务执行。</p>
+
+        <div class="features">
+            <div class="feature-card">
+                <h3>💬 智能对话</h3>
+                <p>支持自然语言交互，理解上下文语境，提供流畅的对话体验。可以回答各种问题，进行深度讨论。</p>
+            </div>
+            <div class="feature-card">
+                <h3>📚 知识问答</h3>
+                <p>基于海量知识库，快速准确地解答各类问题，涵盖科技、文化、生活等领域。</p>
+            </div>
+            <div class="feature-card">
+                <h3>🛠️ 任务协作</h3>
+                <p>协助完成文档撰写、代码生成、数据分析等任务，提升工作效率，实现人机协同。</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 AI助手平台 | 作者：王青玄 | 技术驱动未来</p>
+    </footer>
+</div>
+</body>
+</html>

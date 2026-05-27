@@ -1,0 +1,37 @@
+server:
+  port: 9999
+
+
+spring:
+  application:
+    name: ai-robot-client
+
+
+  ai:
+    mcp:
+      server:
+        name: ai-robot-mcp-server
+        version: 1.0.0
+        type: async
+        sse-endpoint: /sse
+
+  mail:
+    host: smtp.163.com
+    port: 465
+    username: xinfk101@163.com
+    password: CRSCVczVRj6YhxWL
+    protocol: smtp
+    default-encoding: UTF-8
+    properties:
+        mail:
+            smtp:
+              socketFactory:
+                  class: javax.net.ssl.SSLSocketFactory
+                  port: 465
+              ssl:
+                  enable: true
+
+#=======================天气================================
+weather:
+  api-url: https://m23yfr28h4.re.qweatherapi.com
+  api-key: bf20060dec804330a4b4b95ddfaec925

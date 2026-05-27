@@ -1,0 +1,79 @@
+spring:
+  application:
+    name: ai-robot-client
+  profiles:
+    active: dev
+  cassandra:
+    contact-points: 127.0.0.1 # Cassandra 的服务地址（集群方式使用 ， 进行地址分割）
+    port: 9042 # Cassandra 的服务端口
+    local-datacenter: datacenter1 # Cassandra 的数据中心名称
+
+  ai:
+    mcp:
+      client:
+        enabled: true
+        name: ai-robot-client
+        type: async
+        sse:
+          connections:
+            server1:
+              #调用和风天气的api
+              #url: https://mcp.amap.com
+              #sse-endpoint: /sse?key=1deb1c3eadb001545fd3bfd4a13579a4
+
+              #调用本地的mcp-server的服务
+              url: http://localhost:9999
+              sse-endpoint: /sse
+
+#            server2:
+#              url: http://localhost:9999
+#              sse-endpoint: /sse
+
+
+
+
+        stdio:
+          servers-configuration: classpath:mcp/mcp-servers.json
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      base-url: ${OPENAI_BASE_URL}
+      chat:
+        options:
+          model: ${OPENAI_MODEL}
+
+    # 消息持久化配置
+
+    chat:
+      memory:
+        repository:
+          cassandra:
+            keyspace: ai_robot # Cassandra 的 Keyspace 类似MySQL的数据库名
+            table: chat_message # Cassandra 的表名
+            time-to-live: 356d # 消息的过期时间
+            initialize-schema: true # 是否初始化表结构
+
+
+logging:
+  level:
+    root: info
+    org.springframework.ai.chat.client.advisor: debug
+
+
+# 阿里百炼平台
+alibaba:
+  ai:
+    text2image: ${DASHSCOPE_API_KEY}
+
+# 配置 ok http
+okhttp:
+  connection-timeout: 4000 # 连接超时时间
+  read-timeout: 3000 # 读取超时
+  write-timeout: 1500 # 写入超时
+  max-idle-connections: 100 # 最大空闲连接数
+  keep-alive-duration: 30000 # 空闲连接保持时间
+
+
+# searXNG 配置
+searxng:
+  url: http://localhost:9090/search # 搜索服务地址
+  count: 20 # 搜索结果数量

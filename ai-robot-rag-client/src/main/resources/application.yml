@@ -1,0 +1,36 @@
+server:
+  port: 8889
+
+
+spring:
+  application:
+    name: ai-robot-rag-client
+
+
+  # redis配置
+  data:
+    redis:
+      host: localhost
+      port: 6379
+
+
+  ai:
+    openai:
+      api-key: ${OPENAI_API_KEY}
+      base-url: ${OPENAI_BASE_URL}
+      chat:
+        options:
+          model: ${OPENAI_MODEL}
+      embedding:
+        options:
+          model: BAAI/bge-m3 # 向量模型，兼容SiliconFlow
+
+
+
+
+
+    vectorstore:
+      redis:
+        initialize-schema: true # 是否进行初始化
+        index-name: robot-ai-rag # 索引名称
+        prefix: 'embedding:'
