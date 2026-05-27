@@ -19,7 +19,7 @@ spring:
             server1:
               #调用和风天气的api
               #url: https://mcp.amap.com
-              #sse-endpoint: /sse?key=1deb1c3eadb001545fd3bfd4a13579a4
+              #sse-endpoint: /sse?key=
 
               #调用本地的mcp-server的服务
               url: http://localhost:9999
