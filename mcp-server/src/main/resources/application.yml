@@ -16,10 +16,10 @@ spring:
         sse-endpoint: /sse
 
   mail:
-    host: smtp.163.com
+    host: 
     port: 465
-    username: xinfk101@163.com
-    password: CRSCVczVRj6YhxWL
+    username: 
+    password: 
     protocol: smtp
     default-encoding: UTF-8
     properties:
@@ -34,4 +34,4 @@ spring:
 #=======================天气================================
 weather:
   api-url: https://m23yfr28h4.re.qweatherapi.com
-  api-key: bf20060dec804330a4b4b95ddfaec925
+  api-key: 
